@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
   background: var(--buttonBg);
   transition: all 100ms ease-out;
@@ -45,6 +45,7 @@
   cursor: pointer;
   color: var(--orange);
   background: transparent;
+  border: 1px solid var(--orange)
 }
 
 ::-webkit-scrollbar {

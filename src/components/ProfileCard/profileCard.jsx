@@ -4,6 +4,9 @@ import Profile from '../../img/profileImg.jpg'
 import './profileCard.css'
 
 const profileCard = () => {
+
+const ProfilePage = true;
+
   return (
     <div className='profileCard'>
         <div className="profileImages">
@@ -22,8 +25,20 @@ const profileCard = () => {
                 <div className="follow">
                     <span>571</span>
                     <span>Followers</span>
-
                 </div>
+
+                {ProfilePage && (
+                    <>
+                    <div className="vl">
+
+                    </div>
+                    <div className="follow">
+                        <span>3</span>
+                        <span>Posts</span>
+                    </div>
+                    </>
+                )}
+
                 <div className="vl"></div>
                 <div className="follow">
                     <span>1</span>
@@ -33,7 +48,8 @@ const profileCard = () => {
             </div>
             <hr />
         </div>
-        <span>My Profile</span>
+        {ProfilePage? '':  <span>My Profile</span> }
+      
 
     </div>
   )
