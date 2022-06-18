@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 const Auth = () => {
+
   const initialState = {
     firstname: "",
     lastname: "",
@@ -14,8 +15,10 @@ const Auth = () => {
     confirmpass: "",
   };
   const loading = useSelector((state) => state.authReducer.loading);
+  console.log(loading)
 
   const dispatch = useDispatch();
+
   const [isSignUp, setIsSignUp] = useState(false);
 
   const [data, setData] = useState(initialState);
@@ -150,7 +153,7 @@ const Auth = () => {
                 : "Don't have an account Sign up"}
             </span>
             <button
-              className="button infoButton"
+              className="button info-button"
               type="Submit"
               disabled={loading}
             >
